@@ -84,8 +84,9 @@ With a dev container, everyone is able to work in an identical environment and h
 
 ### Step 1. Add Development Conainer Configuration
 1. In VS Code, open the ```comp423-rust-tutorial``` directory. You can do this via: File > Open Folder.  
-2. Install the __Dev Containers__ extension for VS Code if you don't already have it installed.  
-3. Create a ```.devcontainer``` directory in the root of your project with the following file inside of this "hidden" configuration directory:
+2. Install the __rust-analyzer__ extension by the Rust Programming Language Group.
+3. Install the __Dev Containers__ extension for VS Code if you don't already have it installed.  
+4. Create a ```.devcontainer``` directory in the root of your project with the following file inside of this "hidden" configuration directory:
 
 ```.devcontainer/devcontainer.json```
 
@@ -120,13 +121,13 @@ Once your dev container setup completes, close the current terminal tab (trash c
 In addition, run ```cargo --version``` to check that cargo is running.
 
 ### What is Cargo?
-Cargo is a tool used for Rust projects because of its usefulness in handling a lot of tasks for you -- building your code, downloading the libraries your code depends on, etc -- because of this, a vast majority of Rust project use Cargo. Cargo comes installed with Rust, so if your dev container was able to run a recent version of Rust, you're all set for the next steps to running Hello 426!
+Cargo is a tool used for Rust projects because of its usefulness in handling a lot of tasks for you -- building your code, downloading the libraries your code depends on, etc -- because of this, a vast majority of Rust project use Cargo. Cargo comes installed with Rust, so if your dev container was able to run a recent version of Rust, you're all set for the next steps to running Hello COMP423!
 
 ---
 ## Part 3 - Compiling and Running Hello World with Rust
 ### Step 1. Creating a Project with Cargo
 First, create a new project using Cargo within your VSCode terminal.
-``` bash
+``` py
 cargo new hello_comp423 --vcs none
 cd hello_comp423
 ```
@@ -142,7 +143,7 @@ fn main() {
 }
 ```
 Cargo has generated a "Hello, world!" program for you! All you have to do is change it to "Hello COMP423". It should look like this: 
-``` rust
+``` py
 fn main() {
     println!("Hello COMP423");
 }
@@ -153,9 +154,9 @@ From your hello_comp423 directory, build you project by entering the following c
 cargo build
 ```
 When running the command, you should see something similar to this: 
-``` bash
-Compiling hello_comp423 v0.1.0 (/workspaces/comp423-rust-tutorial/hello_comp423)
-Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.20s
+``` 
+   Compiling hello_comp423 v0.1.0 (/workspaces/comp423-rust-tutorial/hello_comp423)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.20s
 ```
 This command creates an executable file in target/debug/hello_comp423 instead of your current directory. Since the default build is a debug build, Cargo puts the binary in a directory named debug. You can run the executable with the command
 ```
@@ -164,7 +165,7 @@ This command creates an executable file in target/debug/hello_comp423 instead of
 This will print Hello COMP423 to the terminal!
 
 ### Comparing to ```gcc``` Command
-You might remember from COMP 211 that you compile a C program using the ```gcc``` subcommand and then can run the generated executable.  
+You might remember from Comp211 that you compile a C program using ```gcc``` and then running the generated executable.  
 #### Compiling Code
 * The command ```cargo build``` in Rust (Cargo) compiles the Rust code (by default in debug mode) and produces an executable binary file located at ```./target/debug/hello_comp423```
 * The command ```gcc -o hello_comp423 hello_comp423.c``` in C (gcc) will compile the hello_comp423 file into an executable named hello_comp423. The resulting binary is located in the current directory ```./hello_comp423```
@@ -188,4 +189,4 @@ Using ```cargo run``` is much more convenient than having to remember to run ```
     * ```cargo run``` combines the function of cargo build and running the compiled binary. It'll compile the project if needed and then immediately run the resulting executable. You'll want to use this if you want to test or debug your program and see its output quickly.
 
 ## Congratulations! 
-### If you made it to the end, you've successfully learned how to create a dev container for Rust and run "Hello COMP423" in Rust.
+### If you made it to the end, you've successfully learned how to run a dev container for Rust and ran "Hello COMP423".
