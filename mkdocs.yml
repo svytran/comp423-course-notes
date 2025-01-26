@@ -4,6 +4,9 @@ theme:
   icon:
     admonition:
       quote: octicons/quote-16
+      info: octicons/info-16
+      question: octicons/question-16
+      tip: octicons/squirrel-16
   features:
     - content.code.copy
     - content.code.select
@@ -17,8 +20,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-
-markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - tables
